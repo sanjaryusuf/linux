@@ -1,0 +1,36 @@
+touch file.txt
+touch file1 file2
+touch dir/file.txt
+
+
+touch -c file.txt
+touch -a file.txt
+touch -m file.txt
+touch -am file.txt
+touch -t 202501010830 file.txt
+touch -d "2025-08-26 12:00" file.txt
+
+cp file.txt backup.txt
+cp file.txt /dir/
+cp file1 file2 /dir/
+cp -i file1 file2
+cp -f file1 file2
+cp -n file1 file2
+cp -u file1 file2
+cp -p file.txt /dir/
+cp -v file.txt /dir/
+cp -r folder /dir/
+cp -R folder /dir/
+cp -rv folder /dir/
+cp -a folder /dir/
+
+mv file.txt new.txt
+mv file.txt /dir/
+mv file1 file2 /dir/
+mv folder /dir/
+
+mv -i file.txt new.txt
+mv -f file.txt new.txt
+mv -n file.txt new.txt
+mv -u file.txt /dir/
+mv -v file.txt /dir/
