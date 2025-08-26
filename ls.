@@ -16,3 +16,811 @@ ls -1
 ls -F
 ls --color
 ls -X
+
+
+cd folder
+cd ..
+cd ../..
+cd ~
+cd /
+cd -
+cd
+
+
+pwd
+
+
+mkdir newdir
+mkdir dir1 dir2
+mkdir -p a/b/c
+mkdir -v newdir
+mkdir -pv a/b/c
+mkdir --help
+
+
+rmdir olddir
+rmdir -p a/b/c
+
+
+rm file.txt
+rm -i file.txt
+rm -f file.txt
+rm -r dir
+rm -rf dir
+rm file1 file2
+rm *.txt
+
+
+touch file.txt
+touch file1 file2
+touch dir/file.txt
+
+
+touch -c file.txt
+touch -a file.txt
+touch -m file.txt
+touch -am file.txt
+touch -t 202501010830 file.txt
+touch -d "2025-08-26 12:00" file.txt
+
+cp file.txt backup.txt
+cp file.txt /dir/
+cp file1 file2 /dir/
+cp -i file1 file2
+cp -f file1 file2
+cp -n file1 file2
+cp -u file1 file2
+cp -p file.txt /dir/
+cp -v file.txt /dir/
+cp -r folder /dir/
+cp -R folder /dir/
+cp -rv folder /dir/
+cp -a folder /dir/
+
+mv file.txt new.txt
+mv file.txt /dir/
+mv file1 file2 /dir/
+mv folder /dir/
+
+mv -i file.txt new.txt
+mv -f file.txt new.txt
+mv -n file.txt new.txt
+mv -u file.txt /dir/
+mv -v file.txt /dir/
+
+cat file.txt
+cat file1 file2
+cat file1 file2 > newfile.txt
+cat file1 >> file2
+cat > file.txt
+cat >> file.txt
+cat -n file.txt
+cat -b file.txt
+cat -s file.txt
+cat -E file.txt
+cat -T file.txt
+
+
+less file.txt
+less file1 file2
+less +100 file.txt
+less +/word file.txt
+less -N file.txt
+less -S file.txt
+less -i file.txt
+less -p pattern file.txt
+less -f bigfile.log
+
+head file.txt
+head -n 5 file.txt
+head -n 20 file.txt
+head -c 50 file.txt
+head -n -5 file.txt
+head file1 file2
+head -q file1 file2
+head -v file.txt
+
+tail file.txt
+tail -n 5 file.txt
+tail -n 20 file.txt
+tail -c 50 file.txt
+tail -n +20 file.txt
+tail -f file.txt
+tail -F file.txt
+tail file1 file2
+tail -q file1 file2
+tail -v file.txt
+
+find . -name "file.txt"
+find . -iname "report.doc"
+find /home -type f
+find /home -type d
+find . -name "*.log"
+find /var -size +10M
+find . -size -50k
+find . -empty
+find /home -user bob
+find . -perm 755
+find /tmp -mtime -2
+find . -mmin -15
+find /var -atime +30
+find . -exec ls -l {} \;
+find . -name "*.bak" -delete
+
+find . -name "file.txt"
+find . -iname "file.txt"
+find . -type f
+find . -type d
+find . -name "*.txt"
+find . -size +1M
+find . -size -100k
+find . -empty
+find . -user username
+find . -perm 644
+find . -mtime -7
+find . -mmin -30
+find . -atime +10
+find . -exec ls -l {} \;
+find . -delete
+
+grep "error" log.txt
+grep -i "linux" notes.txt
+grep -r "main" /home/user/code
+grep -v "test" data.txt
+grep -n "function" script.py
+grep -c "warning" syslog
+grep -l "TODO" *.md
+grep -L "fixme" *.txt
+grep -w "root" /etc/passwd
+grep -x "hello world" file.txt
+grep -e "apple" -e "banana" fruits.txt
+grep -E "cat|dog" animals.txt
+grep -A 2 "error" log.txt
+grep -B 3 "failed" log.txt
+grep -C 4 "timeout" log.txt
+grep --color "keyword" book.txt
+
+grep "word" file.txt
+grep -i "word" file.txt
+grep -r "word" /path
+grep -v "word" file.txt
+grep -n "word" file.txt
+grep -c "word" file.txt
+grep -l "word" *.txt
+grep -L "word" *.txt
+grep -w "word" file.txt
+grep -x "line" file.txt
+grep -e "word1" -e "word2" file.txt
+grep -E "cat|dog" file.txt
+grep -A 3 "word" file.txt
+grep -B 2 "word" file.txt
+grep -C 4 "word" file.txt
+grep --color "word" file.txt
+
+locate file.txt
+locate -i FILE.txt
+locate "*.log"
+locate /usr/bin/python
+locate -c passwd
+locate -l 10 passwd
+locate -r ".*config.*"
+locate -q passwd
+locate -e file.txt
+updatedb
+
+locate file.txt
+locate -i file.txt
+locate "*.txt"
+locate /etc/passwd
+locate -c string
+locate -l 5 string
+locate -r "regex"
+locate -q string
+locate -e file.txt
+updatedb
+
+ps
+ps -e
+ps -f
+ps -ef
+ps -u bob
+ps -U root
+ps -p 1234
+ps aux
+ps ax
+ps -o pid,cmd
+ps --sort=-pcpu
+ps --sort=-pmem
+ps -eo pid,ppid,cmd
+ps -T -p 1234
+
+ps
+ps -e
+ps -f
+ps -ef
+ps -u username
+ps -U root
+ps -p 1234
+ps aux
+ps ax
+ps -o pid,cmd
+ps --sort=-pcpu
+ps --sort=-pmem
+ps -eo pid,ppid,cmd
+ps -T -p 1234
+
+ps aux | grep firefox
+
+ps aux | grep firefox
+ps -ef | grep ssh
+ps -u username | grep python
+ps -ef | grep -i chrome
+ps -ef | grep -v grep
+ps -ef | grep '[a]pache'
+ps -eo pid,cmd | grep nginx
+
+top
+top -d 5
+top -u username
+top -p 1234
+top -n 1
+top -o %CPU
+top -o %MEM
+top -b -n 1
+top -c
+
+htop
+htop -u username
+htop -p 1234
+htop -s PERCENT_CPU
+htop -s PERCENT_MEM
+htop -d 10
+htop -C
+htop -t
+htop -n 1
+	•	F6 → Sort by ustunini o‘zgartirish
+	•	F9 → Processni kill qilish
+	•	F10 → Chiqish
+
+
+kill -l
+kill 1234
+kill -9 1234
+kill -15 1234
+kill -1 1234
+kill -STOP 1234
+kill -CONT 1234
+kill -s SIGKILL 1234
+kill -- -1234
+kill $(pidof nginx)
+	•	kill -9 PID → majburan o‘ldirish
+	•	kill -15 PID → odobli tugatish
+
+
+pkill firefox
+pkill -9 chrome
+pkill -15 nginx
+pkill -u username
+pkill -U 1001
+pkill -P 1234
+pkill -f python
+pkill -o firefox
+pkill -n firefox
+pkill -x sshd
+pkill -9 firefox
+pkill -f python
+
+
+killall firefox
+killall -9 chrome
+killall -15 nginx
+killall -u username
+killall -v firefox
+killall -q firefox
+killall -r 'fire.*'
+killall -w firefox
+killall -i firefox
+	•	pkill → pattern asosida (regex va to‘liq command line bilan ham) ishlaydi
+	•	killall → aniq process nomi yoki regex orqali ishlaydi
+
+
+ping google.com
+ping -c 4 google.com
+ping -i 2 google.com
+ping -s 1000 google.com
+ping -t 64 google.com
+ping -q google.com
+ping -f google.com
+ping -W 3 google.com
+ping -a google.com
+ping -D google.com
+
+ifconfig
+ifconfig -a
+ifconfig eth0
+ifconfig eth0 up
+ifconfig eth0 down
+ifconfig eth0 192.168.1.10
+ifconfig eth0 netmask 255.255.255.0
+ifconfig eth0 mtu 1400
+ifconfig eth0 promisc
+ifconfig eth0 hw ether 00:11:22:33:44:55
+
+ip addr
+ip addr show eth0
+ip link
+ip link set eth0 up
+ip link set eth0 down
+ip addr add 192.168.1.10/24 dev eth0
+ip addr del 192.168.1.10/24 dev eth0
+ip route
+ip route add default via 192.168.1.1
+ip neigh
+
+curl http://example.com
+curl -O http://example.com/file.txt
+curl -o myfile.txt http://example.com/file.txt
+curl -I http://example.com
+curl -L http://example.com
+curl -X POST -d "name=John&age=30" http://example.com
+curl -u user:password http://example.com
+curl -H "Accept: application/json" http://example.com
+curl -v http://example.com
+curl --limit-rate 100k http://example.com/file.zip
+
+wget http://example.com/file.txt
+wget -O myfile.txt http://example.com/file.txt
+wget -c http://example.com/file.zip
+wget -q http://example.com/file.txt
+wget -r http://example.com/dir/
+wget --limit-rate=100k http://example.com/file.zip
+wget --user=username --password=pass http://example.com
+wget --mirror http://example.com
+wget --no-check-certificate https://example.com
+wget -b http://example.com/file.zip
+
+whoami
+id -un
+whoami -a
+
+hostname
+hostname -I
+hostname -i
+hostname -f
+hostnamectl
+sudo hostname newname
+sudo hostnamectl set-hostname newname
+hostname -s
+hostname -d
+
+date
+date "+%Y-%m-%d %H:%M:%S"
+date -u
+sudo date -s "2025-08-26 15:30:00"
+date -R
+date -I
+
+timedatectl
+timedatectl status
+timedatectl set-time "2025-08-26 15:30:00"
+timedatectl set-timezone Asia/Tashkent
+timedatectl set-ntp true
+timedatectl set-ntp false
+
+sudo command
+sudo apt update
+sudo apt upgrade
+sudo systemctl restart nginx
+sudo passwd username
+sudo su
+sudo -i
+sudo -u username command
+sudo visudo
+sudo reboot
+
+su
+su -
+su username
+su - username
+su -c 'command' username
+su -l username
+exit
+
+
+chmod 755 file.txt
+chmod 644 file.txt
+chmod +x script.sh
+chmod -x script.sh
+chmod u+r file.txt
+chmod g-w file.txt
+chmod o+r file.txt
+chmod a+x file.txt
+chmod 700 -R folder/
+chmod u+s file
+
+chown user file.txt
+chown user:group file.txt
+chown :group file.txt
+chown -R user:group folder/
+chown --reference=file1 file2
+
+sudo apt update
+sudo apt upgrade
+sudo apt install package_name
+sudo apt remove package_name
+sudo apt purge package_name
+sudo apt autoremove
+sudo apt search keyword
+sudo apt show package_name
+sudo apt list --installed
+sudo apt full-upgrade
+
+tar -cvf archive.tar file1 file2
+tar -xvf archive.tar
+tar -tvf archive.tar
+tar -czvf archive.tar.gz folder/
+tar -xzvf archive.tar.gz
+tar -cjf archive.tar.bz2 folder/
+tar -xjf archive.tar.bz2
+tar --exclude='*.log' -czvf archive.tar.gz folder/
+tar -C /path/to/extract -xvf archive.tar
+tar -rvf archive.tar newfile
+
+zip archive.zip file1 file2
+zip -r archive.zip folder/
+zip -e archive.zip file1
+zip -u archive.zip file1
+zip -x "*.log"
+
+unzip archive.zip
+unzip archive.zip -d folder/
+unzip -l archive.zip
+unzip -o archive.zip
+unzip -j archive.zip
+
+scp file.txt user@remote:/path/
+scp user@remote:/path/file.txt ./
+scp -r folder/ user@remote:/path/
+scp -P 2222 file.txt user@remote:/path/
+scp -i key.pem file.txt user@remote:/path/
+scp file1.txt file2.txt user@remote:/path/
+scp -C file.txt user@remote:/path/
+scp user@remote:/path/* ./
+scp -v file.txt user@remote:/path/
+scp -3 file1.txt user@host2:/path/
+
+rsync -av file.txt /destination/
+rsync -av folder/ /destination/
+rsync -avz folder/ user@remote:/path/
+rsync -av --delete folder/ /destination/
+rsync -av --progress folder/ /destination/
+rsync -e "ssh -p 2222" file.txt user@remote:/path/
+rsync -av --exclude '*.log' folder/ /destination/
+rsync -av --partial folder/ /destination/
+rsync -az --delete /source/ user@remote:/backup/
+rsync -nav folder/ /destination/
+
+df
+df -h
+df -T
+df -i
+df /home
+df -h --total
+
+du file.txt
+du -h file.txt
+du -sh folder/
+du -h --max-depth=1 folder/
+du -ah folder/
+du -c folder/
+du --exclude="*.log" folder/
+
+uptime
+uptime -p
+uptime -s
+w
+
+who
+who -H
+who -b
+who -q
+who am i
+
+w
+w -h
+w username
+w -s
+w -f
+
+nano file.txt
+nano -w file.txt
+Ctrl+O
+Ctrl+X
+Ctrl+K
+Ctrl+U
+
+vi file.txt
+i
+Esc
+:w
+:q
+:wq
+dd
+yy
+p
+/word
+
+gedit file.txt
+gedit &
+gedit file1 file2
+gedit --new-window
+gedit --standalone
+
+man ls
+man man
+man -k keyword
+man -f command
+man -a command
+
+info ls
+info coreutils
+info -k keyword
+info --apropos keyword
+info
+
+uname
+uname -a
+uname -r
+uname -s
+uname -v
+uname -m
+uname -p
+uname -o
+
+dmesg
+dmesg | less
+dmesg | grep error
+dmesg -T
+dmesg -C
+dmesg --level=err,warn
+dmesg -n 1
+dmesg -f
+
+lscpu
+lscpu | grep Architecture
+lscpu | grep "CPU(s)"
+lscpu | grep MHz
+lscpu | grep "Model name"
+
+lsblk
+lsblk -f
+lsblk -a
+lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
+lsblk -r
+lsblk -p
+
+blkid
+blkid /dev/sda1
+blkid -o value -s UUID /dev/sda1
+blkid -o list
+blkid -L labelname
+
+mount
+mount /dev/sda1 /mnt
+mount -t ext4 /dev/sda1 /mnt
+mount -o ro /dev/sda1 /mnt
+mount -a
+
+umount /mnt
+umount /dev/sda1
+umount -l /mnt
+umount -f /mnt
+umount -a
+
+sudo fdisk -l
+sudo fdisk /dev/sda
+# inside fdisk:
+n
+d
+p
+w
+q
+t
+a
+
+sudo parted /dev/sda
+print
+mklabel gpt
+mkpart primary ext4 1MiB 100MiB
+rm 1
+resizepart 1 200MiB
+quit
+set 1 boot on
+
+sudo adduser username
+sudo adduser --disabled-password username
+sudo adduser username groupname
+
+passwd
+sudo passwd username
+passwd -l username
+passwd -u username
+passwd -e username
+
+sudo deluser username
+sudo deluser --remove-home username
+sudo deluser username groupname
+
+sudo usermod -aG groupname username
+sudo usermod -d /new/home username
+sudo usermod -l newname oldname
+sudo usermod -s /bin/bash username
+sudo usermod -L username
+sudo usermod -U username
+
+groups
+groups username
+
+netstat
+netstat -t
+netstat -u
+netstat -l
+netstat -p
+netstat -an
+
+ss
+ss -t
+ss -u
+ss -l
+ss -p
+ss -s
+
+traceroute example.com
+traceroute -n example.com
+traceroute -m 20 example.com
+traceroute -w 2 example.com
+
+nslookup example.com
+nslookup 8.8.8.8
+nslookup -type=MX example.com
+nslookup -type=NS example.com
+
+dig example.com
+dig @8.8.8.8 example.com
+dig example.com MX
+dig example.com NS
+dig +short example.com
+
+gzip file.txt
+gzip -k file.txt
+gzip -d file.txt.gz
+gzip -c file.txt > file.txt.gz
+gzip -v file.txt
+
+gunzip file.txt.gz
+gunzip -c file.txt.gz > file.txt
+gunzip -v file.txt.gz
+
+bzip2 file.txt
+bzip2 -k file.txt
+bzip2 -d file.txt.bz2
+bzip2 -v file.txt
+
+xz file.txt
+xz -k file.txt
+xz -d file.txt.xz
+xz -v file.txt
+xz -c file.txt > file.txt.xz
+
+unxz file.txt.xz
+unxz -v file.txt.xz
+unxz -k file.txt.xz
+
+jobs
+jobs -l
+jobs -p
+
+bg %1
+bg
+
+fg %1
+fg
+
+nohup command &
+nohup python script.py &
+nohup command > output.log 2>&1 &
+
+# screen
+screen
+screen -S session_name
+Ctrl+A D
+screen -r session_name
+screen -ls
+Ctrl+A K
+
+# tmux
+tmux
+tmux new -s session_name
+Ctrl+B D
+tmux attach -t session_name
+tmux ls
+Ctrl+B %
+Ctrl+B "
+Ctrl+B c
+Ctrl+B x
+
+sort file.txt
+sort -r file.txt
+sort -n numbers.txt
+sort -k 2 file.txt
+sort -u file.txt
+
+uniq file.txt
+uniq -c file.txt
+uniq -d file.txt
+uniq -u file.txt
+
+wc file.txt
+wc -l file.txt
+wc -w file.txt
+wc -c file.txt
+
+cut -d':' -f1 /etc/passwd
+cut -c1-5 file.txt
+cut -f1,3 file.txt
+
+awk '{print $1}' file.txt
+awk -F':' '{print $1, $3}' /etc/passwd
+awk '$3>1000 {print $1}' file.txt
+awk '{sum+=$2} END {print sum}' file.txt
+
+sed 's/old/new/' file.txt
+sed 's/old/new/g' file.txt
+sed -n '1,5p' file.txt
+sed '/pattern/d' file.txt
+sed '2i\Inserted line' file.txt
+
+date
+date +"%Y-%m-%d %H:%M:%S"
+date -s "2025-08-26 12:00:00"
+date -u
+
+cal
+cal 2025
+cal 08 2025
+cal -3
+
+timedatectl
+timedatectl set-time "2025-08-26 12:00:00"
+timedatectl set-timezone Asia/Tashkent
+timedatectl set-ntp true
+timedatectl list-timezones
+
+crontab -e
+crontab -l
+crontab -r
+* * * * * /path/to/command
+0 0 * * * /path/to/command
+
+echo "command" | at 12:00
+at 14:30
+atq
+atrm 2
+
+echo "Hello World"
+echo $HOME
+echo -n "Hello"
+echo -e "Line1\nLine2"
+echo $(date)
+
+systemctl status
+systemctl status ssh
+systemctl start ssh
+systemctl stop ssh
+systemctl restart ssh
+systemctl reload ssh
+systemctl enable ssh
+systemctl disable ssh
+systemctl list-units --type=service
+systemctl is-active ssh
+systemctl is-enabled ssh
