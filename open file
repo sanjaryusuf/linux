@@ -1,0 +1,42 @@
+cat file.txt
+cat file1 file2
+cat file1 file2 > newfile.txt
+cat file1 >> file2
+cat > file.txt
+cat >> file.txt
+cat -n file.txt
+cat -b file.txt
+cat -s file.txt
+cat -E file.txt
+cat -T file.txt
+
+
+less file.txt
+less file1 file2
+less +100 file.txt
+less +/word file.txt
+less -N file.txt
+less -S file.txt
+less -i file.txt
+less -p pattern file.txt
+less -f bigfile.log
+
+head file.txt
+head -n 5 file.txt
+head -n 20 file.txt
+head -c 50 file.txt
+head -n -5 file.txt
+head file1 file2
+head -q file1 file2
+head -v file.txt
+
+tail file.txt
+tail -n 5 file.txt
+tail -n 20 file.txt
+tail -c 50 file.txt
+tail -n +20 file.txt
+tail -f file.txt
+tail -F file.txt
+tail file1 file2
+tail -q file1 file2
+tail -v file.txt
