@@ -1,0 +1,14 @@
+ls 
+ls -a
+ls -l
+ls -lh
+ls -R
+ls -t
+ls -S
+ls -r
+ls -d */
+ls -i
+ls -1
+ls -F
+ls --color
+ls -X
