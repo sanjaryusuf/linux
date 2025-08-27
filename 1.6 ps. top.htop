@@ -1,0 +1,62 @@
+ps
+ps -e
+ps -f
+ps -ef
+ps -u bob
+ps -U root
+ps -p 1234
+ps aux
+ps ax
+ps -o pid,cmd
+ps --sort=-pcpu
+ps --sort=-pmem
+ps -eo pid,ppid,cmd
+ps -T -p 1234
+
+ps
+ps -e
+ps -f
+ps -ef
+ps -u username
+ps -U root
+ps -p 1234
+ps aux
+ps ax
+ps -o pid,cmd
+ps --sort=-pcpu
+ps --sort=-pmem
+ps -eo pid,ppid,cmd
+ps -T -p 1234
+
+ps aux | grep firefox
+
+ps aux | grep firefox
+ps -ef | grep ssh
+ps -u username | grep python
+ps -ef | grep -i chrome
+ps -ef | grep -v grep
+ps -ef | grep '[a]pache'
+ps -eo pid,cmd | grep nginx
+
+top
+top -d 5
+top -u username
+top -p 1234
+top -n 1
+top -o %CPU
+top -o %MEM
+top -b -n 1
+top -c
+
+htop
+htop -u username
+htop -p 1234
+htop -s PERCENT_CPU
+htop -s PERCENT_MEM
+htop -d 10
+htop -C
+htop -t
+htop -n 1
+	•	F6 → Sort by ustunini o‘zgartirish
+	•	F9 → Processni kill qilish
+	•	F10 → Chiqish
