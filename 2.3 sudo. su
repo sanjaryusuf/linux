@@ -1,0 +1,18 @@
+sudo command
+sudo apt update
+sudo apt upgrade
+sudo systemctl restart nginx
+sudo passwd username
+sudo su
+sudo -i
+sudo -u username command
+sudo visudo
+sudo reboot
+
+su
+su -
+su username
+su - username
+su -c 'command' username
+su -l username
+exit
