@@ -16,3 +16,14 @@ su - username
 su -c 'command' username
 su -l username
 exit
+
+sudo apt update
+sudo apt upgrade
+sudo apt install package_name
+sudo apt remove package_name
+sudo apt purge package_name
+sudo apt autoremove
+sudo apt search keyword
+sudo apt show package_name
+sudo apt list --installed
+sudo apt full-upgrade
