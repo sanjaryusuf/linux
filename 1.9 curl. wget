@@ -1,0 +1,22 @@
+
+curl http://example.com
+curl -O http://example.com/file.txt
+curl -o myfile.txt http://example.com/file.txt
+curl -I http://example.com
+curl -L http://example.com
+curl -X POST -d "name=John&age=30" http://example.com
+curl -u user:password http://example.com
+curl -H "Accept: application/json" http://example.com
+curl -v http://example.com
+curl --limit-rate 100k http://example.com/file.zip
+
+wget http://example.com/file.txt
+wget -O myfile.txt http://example.com/file.txt
+wget -c http://example.com/file.zip
+wget -q http://example.com/file.txt
+wget -r http://example.com/dir/
+wget --limit-rate=100k http://example.com/file.zip
+wget --user=username --password=pass http://example.com
+wget --mirror http://example.com
+wget --no-check-certificate https://example.com
+wget -b http://example.com/file.zip
