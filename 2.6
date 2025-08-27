@@ -1,0 +1,21 @@
+scp file.txt user@remote:/path/
+scp user@remote:/path/file.txt ./
+scp -r folder/ user@remote:/path/
+scp -P 2222 file.txt user@remote:/path/
+scp -i key.pem file.txt user@remote:/path/
+scp file1.txt file2.txt user@remote:/path/
+scp -C file.txt user@remote:/path/
+scp user@remote:/path/* ./
+scp -v file.txt user@remote:/path/
+scp -3 file1.txt user@host2:/path/
+
+rsync -av file.txt /destination/
+rsync -av folder/ /destination/
+rsync -avz folder/ user@remote:/path/
+rsync -av --delete folder/ /destination/
+rsync -av --progress folder/ /destination/
+rsync -e "ssh -p 2222" file.txt user@remote:/path/
+rsync -av --exclude '*.log' folder/ /destination/
+rsync -av --partial folder/ /destination/
+rsync -az --delete /source/ user@remote:/backup/
+rsync -nav folder/ /destination/
