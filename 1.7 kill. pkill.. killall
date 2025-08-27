@@ -1,0 +1,39 @@
+kill -l
+kill 1234
+kill -9 1234
+kill -15 1234
+kill -1 1234
+kill -STOP 1234
+kill -CONT 1234
+kill -s SIGKILL 1234
+kill -- -1234
+kill $(pidof nginx)
+	•	kill -9 PID → majburan o‘ldirish
+	•	kill -15 PID → odobli tugatish
+
+
+pkill firefox
+pkill -9 chrome
+pkill -15 nginx
+pkill -u username
+pkill -U 1001
+pkill -P 1234
+pkill -f python
+pkill -o firefox
+pkill -n firefox
+pkill -x sshd
+pkill -9 firefox
+pkill -f python
+
+
+killall firefox
+killall -9 chrome
+killall -15 nginx
+killall -u username
+killall -v firefox
+killall -q firefox
+killall -r 'fire.*'
+killall -w firefox
+killall -i firefox
+	•	pkill → pattern asosida (regex va to‘liq command line bilan ham) ishlaydi
+	•	killall → aniq process nomi yoki regex orqali ishlaydi
