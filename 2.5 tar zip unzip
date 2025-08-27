@@ -1,0 +1,23 @@
+
+tar -cvf archive.tar file1 file2
+tar -xvf archive.tar
+tar -tvf archive.tar
+tar -czvf archive.tar.gz folder/
+tar -xzvf archive.tar.gz
+tar -cjf archive.tar.bz2 folder/
+tar -xjf archive.tar.bz2
+tar --exclude='*.log' -czvf archive.tar.gz folder/
+tar -C /path/to/extract -xvf archive.tar
+tar -rvf archive.tar newfile
+
+zip archive.zip file1 file2
+zip -r archive.zip folder/
+zip -e archive.zip file1
+zip -u archive.zip file1
+zip -x "*.log"
+
+unzip archive.zip
+unzip archive.zip -d folder/
+unzip -l archive.zip
+unzip -o archive.zip
+unzip -j archive.zip
