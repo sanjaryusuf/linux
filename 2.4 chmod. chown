@@ -1,0 +1,17 @@
+
+chmod 755 file.txt
+chmod 644 file.txt
+chmod +x script.sh
+chmod -x script.sh
+chmod u+r file.txt
+chmod g-w file.txt
+chmod o+r file.txt
+chmod a+x file.txt
+chmod 700 -R folder/
+chmod u+s file
+
+chown user file.txt
+chown user:group file.txt
+chown :group file.txt
+chown -R user:group folder/
+chown --reference=file1 file2
