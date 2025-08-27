@@ -1,0 +1,32 @@
+ping google.com
+ping -c 4 google.com
+ping -i 2 google.com
+ping -s 1000 google.com
+ping -t 64 google.com
+ping -q google.com
+ping -f google.com
+ping -W 3 google.com
+ping -a google.com
+ping -D google.com
+
+ifconfig
+ifconfig -a
+ifconfig eth0
+ifconfig eth0 up
+ifconfig eth0 down
+ifconfig eth0 192.168.1.10
+ifconfig eth0 netmask 255.255.255.0
+ifconfig eth0 mtu 1400
+ifconfig eth0 promisc
+ifconfig eth0 hw ether 00:11:22:33:44:55
+
+ip addr
+ip addr show eth0
+ip link
+ip link set eth0 up
+ip link set eth0 down
+ip addr add 192.168.1.10/24 dev eth0
+ip addr del 192.168.1.10/24 dev eth0
+ip route
+ip route add default via 192.168.1.1
+ip neigh
